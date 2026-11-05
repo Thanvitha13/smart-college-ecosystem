@@ -1,0 +1,572 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #24302a;
+  background: #f7f8f6;
+  --bg: #f7f8f6;
+  --panel: #ffffff;
+  --panel-raised: #f0f3ef;
+  --line: #e2e7e2;
+  --line-strong: #cbd4cc;
+  --text: #24302a;
+  --muted: #657168;
+  --subtle: #7d887f;
+  --lime: #347653;
+  --coral: #a64e37;
+  --yellow: #8b6716;
+  --cream: #eef1ed;
+  --font-mono: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  color: #24302a;
+  background: #f7f8f6;
+}
+
+::selection {
+  color: #ffffff;
+  background: #347653;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline-color: #347653;
+}
+
+.button-lime,
+.button-lime:hover {
+  color: #ffffff;
+  background: #347653;
+}
+
+.button-lime:hover {
+  background: #286344;
+}
+
+.button-dark,
+.button-dark:hover {
+  color: #ffffff;
+  background: #263b30;
+}
+
+.button-outline {
+  color: #24302a;
+  border-color: #cbd4cc;
+  background: #ffffff;
+}
+
+.button-outline:hover,
+.button-outline-dark:hover {
+  color: #286344;
+  border-color: #347653;
+  background: #f0f5f1;
+}
+
+.button-outline-dark,
+.inline-link,
+.text-link {
+  color: #347653;
+}
+
+.brand-mark,
+.brand-name,
+.topbar .brand-mark,
+.topbar .brand-name {
+  color: #24302a;
+}
+
+.eyebrow,
+.metric-label,
+.optional,
+.sidebar-label,
+.topbar-date,
+.hero-kicker,
+.stat-index,
+.admin-metric span,
+.detail-live,
+.data-table th {
+  color: #657168;
+}
+
+.landing-page,
+.auth-page,
+.app-shell {
+  color: #24302a;
+  background: #f7f8f6;
+}
+
+.landing-nav,
+.topbar {
+  border-color: #e2e7e2;
+  background: #ffffff;
+}
+
+.landing-nav nav a,
+.landing-footer,
+.hero-proof,
+.hero-proof strong,
+.hero-copy > p,
+.auth-aside > p,
+.auth-aside-foot,
+.auth-form-wrap > p {
+  color: #657168;
+}
+
+.hero-copy h1,
+.stats-intro h2,
+.section-heading h2,
+.how-title h2,
+.auth-aside h1,
+.auth-form-wrap h2 {
+  color: #24302a;
+}
+
+.hero-copy h1 em,
+.how-title h2 em,
+.auth-aside h1 em {
+  color: #347653;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.hero-art {
+  overflow: hidden;
+  border: 1px solid #e2e7e2;
+  border-radius: 8px;
+  background: #edf2ee;
+}
+
+.hero-art:before,
+.scene-canvas,
+.art-orbit,
+.art-center-ring,
+.art-bottom-note {
+  display: none;
+}
+
+.art-center {
+  width: 175px;
+  height: 175px;
+  border: 1px solid #d5e0d7;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: none;
+  animation: none;
+}
+
+.art-center em {
+  color: #347653;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+.art-label {
+  border-color: #e2e7e2;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(36, 48, 42, 0.06);
+  animation: none;
+}
+
+.art-label small,
+.art-bottom-note {
+  color: #657168;
+}
+
+.label-green {
+  color: #347653;
+  background: #e8f1eb;
+}
+
+.label-coral {
+  color: #a64e37;
+  background: #f6ece8;
+}
+
+.ticker-band {
+  border: 0;
+  color: #ffffff;
+  background: #263b30;
+  transform: none;
+}
+
+.ticker-track {
+  animation: none;
+}
+
+.ticker-track i {
+  color: #b7d1bd;
+}
+
+.stats-strip,
+.how-section {
+  color: #24302a;
+}
+
+.featured-section {
+  border-color: #e2e7e2;
+  background: #eef1ed;
+}
+
+.closing-band {
+  color: #24302a;
+  background: #e8eee9;
+}
+
+.closing-band .eyebrow {
+  color: #657168;
+}
+
+.landing-footer {
+  color: #657168;
+}
+
+.auth-aside:after {
+  display: none;
+}
+
+.auth-form-panel {
+  padding: 28px;
+  border: 1px solid #e2e7e2;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.auth-form-wrap > .eyebrow,
+.auth-switch button,
+.forgot-link {
+  color: #347653;
+}
+
+.auth-tabs {
+  border-color: #e2e7e2;
+  background: #f3f5f3;
+}
+
+.auth-tabs button {
+  color: #657168;
+}
+
+.auth-tabs button.selected {
+  color: #24302a;
+  background: #e2ebe4;
+}
+
+.form-stack label {
+  color: #3c4940;
+}
+
+.form-stack input,
+.form-stack textarea,
+.form-stack select,
+.table-select,
+.filter-control {
+  color: #24302a;
+  border-color: #cbd4cc;
+  background: #ffffff;
+}
+
+.form-stack input::placeholder,
+.form-stack textarea::placeholder,
+.search-field input::placeholder,
+.filter-control input::placeholder,
+.filter-control input {
+  color: #7d887f;
+}
+
+.form-stack input[type="date"] {
+  color-scheme: light;
+}
+
+.reset-panel {
+  border-color: #e2e7e2;
+  background: #ffffff;
+}
+
+.reset-panel > p,
+.profile-photo-panel > div:first-child p,
+.secure-note {
+  color: #657168;
+}
+
+.profile-photo-panel {
+  background: #ffffff;
+}
+
+.topbar,
+.sidebar,
+.profile-chip,
+.nav-link,
+.signout-link,
+.page-heading h1,
+.page-copy,
+.empty-state h3,
+.empty-state p,
+.metric-panel,
+.metric-panel > p,
+.metric-panel > a,
+.deadline-meta strong,
+.deadline-meta small,
+.deadline-date,
+.search-field,
+.search-field input,
+.filter-control select,
+.data-table td,
+.data-table th,
+.notification-card,
+.profile-card,
+.detail-panel {
+  color: #24302a;
+}
+
+.sidebar {
+  border-color: #e2e7e2;
+  background: #ffffff;
+}
+
+.sidebar-label,
+.profile-mini span,
+.signout-link,
+.nav-link,
+.page-copy,
+.loading-state,
+.empty-state p,
+.metric-label,
+.metric-panel > p,
+.metric-panel > a,
+.deadline-meta small,
+.deadline-date,
+.search-field,
+.filter-control,
+.filter-control select,
+.filter-control input {
+  color: #657168;
+}
+
+.nav-link.active {
+  color: #286344;
+  border-color: #d3e2d7;
+  background: #edf4ef;
+}
+
+.nav-link.active svg,
+.nav-link:hover,
+.metric-panel > a:hover,
+.deadline-row:hover .deadline-meta strong {
+  color: #286344;
+}
+
+.nav-link:hover,
+.icon-button:hover,
+.signout-link:hover {
+  background: #f0f3f0;
+}
+
+.page-heading .eyebrow,
+.dashboard-section-title .eyebrow,
+.deadline-panel-heading .eyebrow {
+  color: #657168;
+}
+
+.opportunity-card,
+.metric-panel,
+.deadline-panel,
+.search-panel,
+.empty-state,
+.profile-photo-panel,
+.notification-card,
+.profile-card,
+.detail-panel {
+  border-color: #e2e7e2;
+  background: #ffffff;
+  background-image: none;
+  box-shadow: 0 2px 8px rgba(36, 48, 42, 0.035);
+}
+
+.metric-feature {
+  background: #edf4ef;
+}
+
+.metric-icon,
+.metric-lime,
+.deadline-day,
+.empty-icon {
+  color: #347653;
+  border-color: #d3e2d7;
+  background: #edf4ef;
+}
+
+.metric-orange {
+  color: #a64e37;
+  border-color: #ead8d1;
+  background: #f8efec;
+}
+
+.metric-sand {
+  color: #8b6716;
+  border-color: #e8dfc7;
+  background: #f7f3e8;
+}
+
+.deadline-row,
+.filter-row,
+.profile-mini {
+  border-color: #e2e7e2;
+}
+
+.filter-control option,
+.table-select option {
+  color: #24302a;
+  background: #ffffff;
+}
+
+.error-banner {
+  color: #8f3c29;
+  border-color: #ead1c9;
+  background: #fbefec;
+}
+
+.success-note {
+  color: #286344;
+}
+
+@media (max-width: 760px) {
+  .auth-form-panel {
+    padding: 20px;
+  }
+}
+
+.eyebrow,
+.metric-label,
+.optional,
+.sidebar-label,
+.topbar-date,
+.hero-kicker,
+.stat-index,
+.admin-metric span,
+.detail-live,
+.data-table th {
+  color: #4f5d53;
+  font-size: 11px;
+}
+
+.sidebar-label,
+.topbar-date,
+.metric-label,
+.admin-metric span {
+  font-size: 12px;
+}
+
+.page-copy,
+.stats-intro p,
+.hero-copy > p,
+.auth-aside > p,
+.auth-form-wrap > p,
+.landing-nav nav a,
+.landing-footer,
+.hero-proof,
+.profile-mini span,
+.signout-link,
+.nav-link,
+.loading-state,
+.empty-state p,
+.metric-panel > p,
+.metric-panel > a,
+.deadline-meta small,
+.deadline-date,
+.search-field input,
+.filter-control,
+.filter-control select,
+.filter-control input,
+.results-heading,
+.results-heading > span:last-child {
+  color: #4f5d53;
+  font-size: 12px;
+}
+
+.card-title-link h3 {
+  color: #24302a;
+  font-size: 16px;
+}
+
+.organization-name,
+.card-description,
+.card-footer {
+  color: #4f5d53;
+  font-size: 12px;
+}
+
+.card-description {
+  min-height: 58px;
+  max-height: 58px;
+  line-height: 1.6;
+}
+
+.card-skills span,
+.skill-list span {
+  color: #3f4d43;
+  background: #edf2ee;
+  font-size: 11px;
+}
+
+.category-tag,
+.match-score,
+.status-pill {
+  color: #286344;
+  border-color: #d3e2d7;
+  background: #edf4ef;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.opportunity-card .category-tag {
+  color: #286344;
+}
+
+.card-footer,
+.card-skills span,
+.category-tag,
+.match-score,
+.profile-mini span,
+.sidebar-label {
+  font-weight: 500;
+}
+
+.results-heading strong {
+  color: #24302a;
+  font-size: 13px;
+}
+
+.filter-control {
+  min-height: 38px;
+}
+
+.search-field input::placeholder,
+.filter-control input::placeholder,
+.form-stack input::placeholder,
+.form-stack textarea::placeholder {
+  color: #59675d;
+  opacity: 1;
+}
+
+.profile-mini span,
+.deadline-meta small,
+.deadline-date,
+.topbar-date {
+  color: #4f5d53;
+}
+
+.landing-footer,
+.landing-footer > span {
+  color: #4f5d53;
+}
+
+.art-label small {
+  color: #4f5d53;
+  font-size: 11px;
+}

@@ -1,0 +1,15 @@
+node_modules/
+frontend/dist/
+backend/uploads/
+.env
+*.env
+backend/.env
+*.log
+.DS_Store
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/

@@ -1,0 +1,22 @@
+{
+  "name": "opportunityhub",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev --workspace frontend\" \"npm:dev --workspace backend\"",
+    "build": "npm run build --workspace frontend",
+    "start": "npm run start --workspace backend",
+    "seed": "npm run seed --workspace backend",
+    "check": "npm run check --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
