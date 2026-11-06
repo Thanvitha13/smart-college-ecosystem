@@ -11,7 +11,7 @@ import { Application, Notification, Opportunity, Report, SavedOpportunity, User 
 import { adminOnly, protect, studentOnly } from '../middleware/auth.js';
 
 const router = Router();
-const uploadDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../uploads');
+const uploadDir = path.resolve(process.env.UPLOADS_DIR || path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../uploads'));
 const categories = ['Internship', 'Hackathon', 'Scholarship', 'Technical Event', 'Workshop', 'Coding Competition', 'Online Course', 'Research'];
 const upload = multer({
   storage: multer.diskStorage({

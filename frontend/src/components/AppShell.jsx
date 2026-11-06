@@ -2,6 +2,7 @@ import { Bell, Bookmark, BriefcaseBusiness, Compass, Flag, LayoutDashboard, LogO
 import { useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext.jsx';
+import { assetUrl } from '../services/api.js';
 
 export default function AppShell() {
   const { user, signOut } = useAuth();
@@ -21,7 +22,7 @@ export default function AppShell() {
         <div className="topbar-right">
           <span className="topbar-date">YOUR NEXT MOVE STARTS HERE</span>
           <NavLink to="/profile" className="profile-chip" title="Edit profile">
-            {user?.profileImage ? <img src={user.profileImage} alt="" className="avatar-chip-img" /> : <span>{(user?.name || 'Student').slice(0, 1).toUpperCase()}</span>}
+            {user?.profileImage ? <img src={assetUrl(user.profileImage)} alt="" className="avatar-chip-img" /> : <span>{(user?.name || 'Student').slice(0, 1).toUpperCase()}</span>}
             <strong>{user?.name?.split(' ')[0]}</strong>
             <Settings2 size={15} />
           </NavLink>
@@ -35,7 +36,7 @@ export default function AppShell() {
           <div className="sidebar-bottom">
             <div className="profile-mini">
               <div className="avatar-small">
-                {user?.profileImage ? <img src={user.profileImage} alt="" className="avatar-small-img" /> : (user?.name || 'Student').slice(0, 1).toUpperCase()}
+                {user?.profileImage ? <img src={assetUrl(user.profileImage)} alt="" className="avatar-small-img" /> : (user?.name || 'Student').slice(0, 1).toUpperCase()}
               </div>
               <div>
                 <strong>{user?.name}</strong>

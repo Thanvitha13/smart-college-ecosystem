@@ -37,6 +37,18 @@ npm run dev
 
 Open <http://localhost:5173>. The API listens at <http://localhost:5000>; Vite proxies `/api` and `/uploads` to it. Build the client with `npm run build`. Run workspace syntax/build checks with `npm run check`.
 
+## Deploy to Vercel and Render
+
+The frontend is configured for Vercel (`vercel.json`); the Express API is configured as a Render web service (`render.yaml`). MongoDB Atlas is required. Render's persistent upload disk is configured for profile photos and resumes.
+
+1. Create a MongoDB Atlas database and a database user. Configure Atlas network access to allow connections from your Render service.
+2. In Vercel, import this repository and deploy it using the settings in `vercel.json`. You can deploy the frontend before the API, but login and other API-backed features will not work until the backend is connected.
+3. In Render, create a Blueprint from this repository and deploy `render.yaml`. Provide `MONGODB_URI`, `CLIENT_ORIGIN`, `ADMIN_EMAIL`, and `ADMIN_PASSWORD` when prompted. Set `CLIENT_ORIGIN` to your Vercel site origin (for example, `https://your-site.vercel.app`); Render generates `JWT_SECRET`.
+4. In Vercel, add `VITE_API_URL` with the Render service origin only (for example, `https://opportunityhub-api.onrender.com`, without `/api`) and redeploy. Confirm the Render `CLIENT_ORIGIN` exactly matches the deployed Vercel origin.
+5. Seed the production database if you want the initial admin account and sample listings. Run `npm run seed --workspace backend` with the production `MONGODB_URI`, `ADMIN_EMAIL`, and `ADMIN_PASSWORD` in your local `backend/.env`. Never commit that file. Replace the sample `example.com` listing URLs before publishing.
+
+The Render blueprint uses a paid Starter service and a 1 GB persistent disk so uploaded files survive deploys and restarts. Password recovery email is optional; configure the SMTP variables in Render to enable it.
+
 ## Optional password recovery email
 
 Set `SMTP_HOST`, `SMTP_PORT` (usually `587`), `SMTP_USER`, `SMTP_PASS`, `SMTP_SECURE` (`true` for implicit TLS, otherwise `false`), and `MAIL_FROM` in `backend/.env`. Reset tokens are random, stored as SHA-256 hashes, expire after 30 minutes, and are single-use. Without SMTP settings the recovery endpoint returns a configuration error; it does not expose a reset token in the browser.

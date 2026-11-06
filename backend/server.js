@@ -15,7 +15,7 @@ dotenv.config();
 
 const app = express();
 const port = Number(process.env.PORT) || 5000;
-const uploadsDir = path.join(currentDir, 'uploads');
+const uploadsDir = path.resolve(process.env.UPLOADS_DIR || path.join(currentDir, 'uploads'));
 
 if (!process.env.JWT_SECRET) throw new Error('JWT_SECRET is required. Set it in backend/.env before starting the API.');
 
